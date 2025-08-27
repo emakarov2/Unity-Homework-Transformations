@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class MovementForwardGlobal : MonoBehaviour
 {
     [SerializeField] private float _moveDistance = 10f;
     [SerializeField] private float _moveSpeed = 1f;
@@ -8,12 +8,12 @@ public class Movement : MonoBehaviour
     private Vector3 startPosition;
     private bool _isMovingForward = true;
 
-    void Start()
+    private void Start()
     {
         startPosition = transform.position;
     }
 
-    void Update()
+    private void Update()
     {
         Vector3 targetPosition = _isMovingForward ? startPosition + Vector3.forward * _moveDistance : startPosition;
 

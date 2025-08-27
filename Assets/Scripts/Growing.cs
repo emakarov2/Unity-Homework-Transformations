@@ -8,7 +8,7 @@ public class Growing : MonoBehaviour
 
     private bool _isGrowing = true;
 
-    void Update()
+    private void Update()
     {
         float scaleChange = _growthSpeed * Time.deltaTime;
 
@@ -25,8 +25,8 @@ public class Growing : MonoBehaviour
                 _isGrowing = false;
             }
         }
-        else 
-        { 
+        else
+        {
             currentScale -= Vector3.one * scaleChange;
 
             if (currentScale.x <= _minScale)
